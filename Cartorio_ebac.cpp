@@ -11,7 +11,7 @@ int registro()
 	char sobrenome[40];
 	char cargo [40];
 	
-	printf ("Digite o CPF ‡ ser cadastrado: ");
+	printf ("Digite o CPF √† ser cadastrado: ");
 	scanf("%s", cpf);
 	
 	strcpy(arquivo, cpf);
@@ -66,7 +66,7 @@ int consulta()
 	char cpf[40];
 	char conteudo[200];
 	
-	printf("Digite o CPF ‡ ser consultado: ");
+	printf("Digite o CPF √† ser consultado: ");
 	scanf("%s",cpf);
 	
 	FILE *file;
@@ -74,13 +74,13 @@ int consulta()
 	
 	if(file == NULL)
  {
- 	printf("N„o foi possÌvel abrir o arquivo. N„o foi localizado.\n");
+ 	printf("N√£o foi poss√≠vel abrir o arquivo. N√£o foi localizado.\n");
  	
 	 }
 	 
 	 while(fgets(conteudo,200,file) != NULL)	
 	{
-		printf("\nEssas s„o as informaÁ„oes do usu·rio: ");
+		printf("\nEssas s√£o as informa√ß√£oes do usu√°rio: ");
 		printf("%s",conteudo);
 		printf("\n\n");
 		
@@ -96,7 +96,7 @@ int deletar()
 {
 	char cpf[40];
 	
-	printf("Digite o CPF do usu·rio ‡ ser deletado: ");
+	printf("Digite o CPF do usu√°rio √† ser deletado: ");
 	scanf("%s",cpf);
 	
 	remove(cpf);	
@@ -106,7 +106,7 @@ int deletar()
 	
 	if(file == NULL)
 	{
-		printf("O uu·rio n„o foi encontrado!\n");
+		printf("O uu√°rio n√£o foi encontrado!\n");
 		system("pause");
 		
 	}
@@ -132,12 +132,12 @@ int main()
 	    setlocale(LC_ALL, "Portuguese");
 	
 	
-    	printf("### CartÛrio da EBAC ###\n\n");
-    	printf("Escolha a opÁ„o desejada do menu:\n\n");
+    	printf("### Cart√≥rio da EBAC ###\n\n");
+    	printf("Escolha a op√ß√£o desejada do menu:\n\n");
     	printf("\t1- Registrar nomes\n");
     	printf("\t2- Consultar nomes\n");
     	printf("\t3- Deletar nomes\n");
-    	printf("OpÁ„o: ");
+    	printf("Op√ß√£o: ");
 	
 	
     	scanf("%d", &opcao);
@@ -159,6 +159,11 @@ int main()
     case 3:
          deletar();
          break;
+
+	case 4:
+	    printf("Obrigada por utilizar o sistema!\n");
+		return 0;
+		break;  
     
 	
 	
